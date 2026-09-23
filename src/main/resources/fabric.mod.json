@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "ecorce",
+	"version": "${version}",
+	"name": "ecorce",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/ecorce/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.onticentity.ecorce.Ecorce"
+		],
+		"client": [
+			"com.onticentity.ecorce.client.EcorceClient"
+		],
+		"fabric-datagen": [
+			"com.onticentity.ecorce.client.EcorceDataGenerator"
+		]
+	},
+	"mixins": [
+		"ecorce.mixins.json",
+		{
+			"config": "ecorce.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
