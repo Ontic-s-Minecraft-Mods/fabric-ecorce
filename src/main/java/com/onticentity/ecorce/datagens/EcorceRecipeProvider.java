@@ -27,11 +27,12 @@ public class EcorceRecipeProvider extends FabricRecipeProvider {
             public void buildRecipes() {
                 HolderLookup.RegistryLookup<Item> itemLookup = registries.lookupOrThrow(Registries.ITEM);
 
-                shaped(RecipeCategory.TOOLS, EcorceItems.BARK_LIGHTER)
-                        .pattern(" B")
-                        .pattern("S ")
-                        .define('B', OUTER_BARKS)
-                        .define('S', Items.STICK)
+                shapeless(
+                                RecipeCategory.TOOLS,
+                                EcorceItems.BARK_LIGHTER
+                        )
+                        .requires(OUTER_BARKS)
+                        .requires(Items.STICK)
                         .unlockedBy(
                                 "has_outer_bark",
                                 has(OUTER_BARKS)
