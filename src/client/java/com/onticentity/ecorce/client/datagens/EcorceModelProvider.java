@@ -98,6 +98,10 @@ public class EcorceModelProvider extends FabricModelProvider {
                 EcorceItems.PALE_OAK_OUTER_BARK,
                 ModelTemplates.FLAT_ITEM
         );
+        itemModelGenerator.generateFlatItem(
+                EcorceItems.BARK_LIGHTER,
+                ModelTemplates.FLAT_ITEM
+        );
     }
 
     @Override

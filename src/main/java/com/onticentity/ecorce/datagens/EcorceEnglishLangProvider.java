@@ -39,5 +39,7 @@ public class EcorceEnglishLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add("item.ecorce.pale_oak_inner_bark", "Pale Oak Inner Bark");
         translationBuilder.add("item.ecorce.pale_oak_outer_bark", "Pale Oak Outer Bark");
+
+        translationBuilder.add("item.ecorce.bark_lighter", "Bark Lighter");
     }
 }

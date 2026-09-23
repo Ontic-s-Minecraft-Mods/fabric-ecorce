@@ -6,6 +6,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.FlintAndSteelItem;
 import net.minecraft.world.item.Item;
 
 import java.util.function.Function;
@@ -189,6 +190,15 @@ public class EcorceItems {
             PALE_OAK_INNER_BARK_KEY,
             Item::new,
             new Item.Properties()
+    );
+
+    public static final ResourceKey<Item> BARK_LIGHTER_KEY =
+            keyOfItem("bark_lighter");
+
+    public static final Item BARK_LIGHTER = register(
+            BARK_LIGHTER_KEY,
+            FlintAndSteelItem::new,
+            new Item.Properties().durability(8)
     );
 
 
