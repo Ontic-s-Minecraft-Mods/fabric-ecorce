@@ -22,7 +22,7 @@
 			"com.onticentity.ecorce.client.EcorceClient"
 		],
 		"fabric-datagen": [
-			"com.onticentity.ecorce.client.EcorceDataGenerator"
+			"com.onticentity.ecorce.client.datagens.EcorceDataGen"
 		]
 	},
 	"mixins": [
