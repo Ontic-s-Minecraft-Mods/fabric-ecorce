@@ -18,7 +18,15 @@ import java.util.Map;
 public class EcorceBarkTree {
 
     private static final Map<Block, List<Item>> LOG = Map.ofEntries(
-            Map.entry(Blocks.OAK_LOG, List.of(EcorceItems.OAK_INNER_BARK, EcorceItems.OAK_OUTER_BARK))
+            Map.entry(Blocks.OAK_LOG, List.of(EcorceItems.OAK_INNER_BARK, EcorceItems.OAK_OUTER_BARK)),
+            Map.entry(Blocks.SPRUCE_LOG, List.of(EcorceItems.SPRUCE_INNER_BARK, EcorceItems.SPRUCE_OUTER_BARK)),
+            Map.entry(Blocks.BIRCH_LOG, List.of(EcorceItems.BIRCH_INNER_BARK, EcorceItems.BIRCH_OUTER_BARK)),
+            Map.entry(Blocks.JUNGLE_LOG, List.of(EcorceItems.JUNGLE_INNER_BARK, EcorceItems.JUNGLE_OUTER_BARK)),
+            Map.entry(Blocks.ACACIA_LOG, List.of(EcorceItems.ACACIA_INNER_BARK, EcorceItems.ACACIA_OUTER_BARK)),
+            Map.entry(Blocks.DARK_OAK_LOG, List.of(EcorceItems.DARK_OAK_INNER_BARK, EcorceItems.DARK_OAK_OUTER_BARK)),
+            Map.entry(Blocks.MANGROVE_LOG, List.of(EcorceItems.MANGROVE_INNER_BARK, EcorceItems.MANGROVE_OUTER_BARK)),
+            Map.entry(Blocks.CHERRY_LOG, List.of(EcorceItems.CHERRY_INNER_BARK, EcorceItems.CHERRY_OUTER_BARK)),
+            Map.entry(Blocks.PALE_OAK_LOG, List.of(EcorceItems.PALE_OAK_INNER_BARK, EcorceItems.PALE_OAK_OUTER_BARK))
     );
 
     public static void register() {
@@ -42,6 +50,10 @@ public class EcorceBarkTree {
             if (!level.isClientSide()) {
 
                 List<Item> items = LOG.get(state.getBlock());
+
+                if (items == null) {
+                    return InteractionResult.PASS;
+                }
 
                 for (Item item : items) {
                     Block.popResource(
