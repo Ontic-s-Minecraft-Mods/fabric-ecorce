@@ -1,5 +1,6 @@
 package com.onticentity.ecorce.client.datagens;
 
+import com.onticentity.ecorce.datagens.EcorceEnglishLangProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
@@ -10,5 +11,6 @@ public class EcorceDataGen implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
         pack.addProvider(EcorceModelProvider::new);
+        pack.addProvider(EcorceEnglishLangProvider::new);
     }
 }
