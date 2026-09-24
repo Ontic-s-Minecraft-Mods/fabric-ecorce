@@ -4,12 +4,15 @@ import com.onticentity.ecorce.items.EcorceItems;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
@@ -69,6 +72,15 @@ public class EcorceBarkTree {
                         1,
                         player,
                         hand
+                );
+
+                level.playSound(
+                        null,
+                        pos,
+                        SoundEvents.AXE_STRIP,
+                        SoundSource.BLOCKS,
+                        1.0F,
+                        1.0F
                 );
             }
 

@@ -39,6 +39,19 @@ public class EcorceRecipeProvider extends FabricRecipeProvider {
                         )
                         .save(output);
 
+                shaped(
+                        RecipeCategory.TOOLS,
+                        Items.BOWL
+                )
+                        .pattern("B B")
+                        .pattern(" B ")
+                        .define('B', OUTER_BARKS)
+                        .unlockedBy(
+                                "has_outer_bark",
+                                has(OUTER_BARKS)
+                        )
+                        .save(output);
+
             }
         };
     }
