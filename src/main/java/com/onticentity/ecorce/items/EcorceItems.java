@@ -1,11 +1,14 @@
 package com.onticentity.ecorce.items;
 
 import com.onticentity.ecorce.Ecorce;
+import net.fabricmc.fabric.api.registry.CompostableRegistry;
+import net.fabricmc.fabric.api.registry.FuelValueEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.FlintAndSteelItem;
 import net.minecraft.world.item.Item;
 
@@ -30,6 +33,12 @@ public class EcorceItems {
             OAK_INNER_BARK_KEY,
             Item::new,
             new Item.Properties()
+                    .food(
+                            new FoodProperties.Builder()
+                                    .nutrition(1)
+                                    .saturationModifier(0.2f)
+                                    .build()
+                    )
     );
 
 
@@ -50,6 +59,12 @@ public class EcorceItems {
             SPRUCE_INNER_BARK_KEY,
             Item::new,
             new Item.Properties()
+                    .food(
+                            new FoodProperties.Builder()
+                                    .nutrition(2)
+                                    .saturationModifier(0.1f)
+                                    .build()
+                    )
     );
 
 
@@ -70,6 +85,12 @@ public class EcorceItems {
             BIRCH_INNER_BARK_KEY,
             Item::new,
             new Item.Properties()
+                    .food(
+                            new FoodProperties.Builder()
+                                    .nutrition(1)
+                                    .saturationModifier(0.3f)
+                                    .build()
+                    )
     );
 
 
@@ -90,6 +111,12 @@ public class EcorceItems {
             JUNGLE_INNER_BARK_KEY,
             Item::new,
             new Item.Properties()
+                    .food(
+                            new FoodProperties.Builder()
+                                    .nutrition(2)
+                                    .saturationModifier(0.2f)
+                                    .build()
+                    )
     );
 
 
@@ -110,6 +137,12 @@ public class EcorceItems {
             ACACIA_INNER_BARK_KEY,
             Item::new,
             new Item.Properties()
+                    .food(
+                            new FoodProperties.Builder()
+                                    .nutrition(1)
+                                    .saturationModifier(0.3f)
+                                    .build()
+                    )
     );
 
 
@@ -130,6 +163,12 @@ public class EcorceItems {
             DARK_OAK_INNER_BARK_KEY,
             Item::new,
             new Item.Properties()
+                    .food(
+                            new FoodProperties.Builder()
+                                    .nutrition(1)
+                                    .saturationModifier(0.4f)
+                                    .build()
+                    )
     );
 
 
@@ -150,6 +189,12 @@ public class EcorceItems {
             MANGROVE_INNER_BARK_KEY,
             Item::new,
             new Item.Properties()
+                    .food(
+                            new FoodProperties.Builder()
+                                    .nutrition(2)
+                                    .saturationModifier(0.3f)
+                                    .build()
+                    )
     );
 
 
@@ -170,6 +215,12 @@ public class EcorceItems {
             CHERRY_INNER_BARK_KEY,
             Item::new,
             new Item.Properties()
+                    .food(
+                            new FoodProperties.Builder()
+                                    .nutrition(2)
+                                    .saturationModifier(0.2f)
+                                    .build()
+                    )
     );
 
 
@@ -190,6 +241,12 @@ public class EcorceItems {
             PALE_OAK_INNER_BARK_KEY,
             Item::new,
             new Item.Properties()
+                    .food(
+                            new FoodProperties.Builder()
+                                    .nutrition(1)
+                                    .saturationModifier(0.5f)
+                                    .build()
+                    )
     );
 
     public static final ResourceKey<Item> BARK_LIGHTER_KEY =
@@ -229,5 +286,81 @@ public class EcorceItems {
     }
 
     public static void initialize() {
+
+        FuelValueEvents.BUILD.register((builder, context) -> {
+
+            // OAK
+            builder.add(OAK_OUTER_BARK, 125);
+            builder.add(OAK_INNER_BARK, 100);
+
+            // SPRUCE
+            builder.add(SPRUCE_OUTER_BARK, 150);
+            builder.add(SPRUCE_INNER_BARK, 125);
+
+            // BIRCH
+            builder.add(BIRCH_OUTER_BARK, 125);
+            builder.add(BIRCH_INNER_BARK, 100);
+
+            // JUNGLE
+            builder.add(JUNGLE_OUTER_BARK, 175);
+            builder.add(JUNGLE_INNER_BARK, 150);
+
+            // ACACIA
+            builder.add(ACACIA_OUTER_BARK, 150);
+            builder.add(ACACIA_INNER_BARK, 125);
+
+            // DARK OAK
+            builder.add(DARK_OAK_OUTER_BARK, 150);
+            builder.add(DARK_OAK_INNER_BARK, 125);
+
+            // MANGROVE
+            builder.add(MANGROVE_OUTER_BARK, 225);
+            builder.add(MANGROVE_INNER_BARK, 200);
+
+            // CHERRY
+            builder.add(CHERRY_OUTER_BARK, 200);
+            builder.add(CHERRY_INNER_BARK, 175);
+
+            // PALE OAK
+            builder.add(PALE_OAK_OUTER_BARK, 200);
+            builder.add(PALE_OAK_INNER_BARK, 175);
+        });
+
+
+        // OAK
+        CompostableRegistry.INSTANCE.add(OAK_OUTER_BARK, 0.35f);
+        CompostableRegistry.INSTANCE.add(OAK_INNER_BARK, 0.30f);
+
+        // SPRUCE
+        CompostableRegistry.INSTANCE.add(SPRUCE_OUTER_BARK, 0.35f);
+        CompostableRegistry.INSTANCE.add(SPRUCE_INNER_BARK, 0.30f);
+
+        // BIRCH
+        CompostableRegistry.INSTANCE.add(BIRCH_OUTER_BARK, 0.35f);
+        CompostableRegistry.INSTANCE.add(BIRCH_INNER_BARK, 0.30f);
+
+        // JUNGLE
+        CompostableRegistry.INSTANCE.add(JUNGLE_OUTER_BARK, 0.35f);
+        CompostableRegistry.INSTANCE.add(JUNGLE_INNER_BARK, 0.30f);
+
+        // ACACIA
+        CompostableRegistry.INSTANCE.add(ACACIA_OUTER_BARK, 0.35f);
+        CompostableRegistry.INSTANCE.add(ACACIA_INNER_BARK, 0.30f);
+
+        // DARK OAK
+        CompostableRegistry.INSTANCE.add(DARK_OAK_OUTER_BARK, 0.35f);
+        CompostableRegistry.INSTANCE.add(DARK_OAK_INNER_BARK, 0.30f);
+
+        // MANGROVE
+        CompostableRegistry.INSTANCE.add(MANGROVE_OUTER_BARK, 0.35f);
+        CompostableRegistry.INSTANCE.add(MANGROVE_INNER_BARK, 0.30f);
+
+        // CHERRY
+        CompostableRegistry.INSTANCE.add(CHERRY_OUTER_BARK, 0.35f);
+        CompostableRegistry.INSTANCE.add(CHERRY_INNER_BARK, 0.30f);
+
+        // PALE OAK
+        CompostableRegistry.INSTANCE.add(PALE_OAK_OUTER_BARK, 0.35f);
+        CompostableRegistry.INSTANCE.add(PALE_OAK_INNER_BARK, 0.30f);
     }
 }
