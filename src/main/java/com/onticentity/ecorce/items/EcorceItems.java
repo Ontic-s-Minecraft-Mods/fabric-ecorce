@@ -1,9 +1,6 @@
 package com.onticentity.ecorce.items;
 
 import com.onticentity.ecorce.Ecorce;
-import com.onticentity.ecorce.items.effects.EcorceCharredBirchInnerBarkEffect;
-import com.onticentity.ecorce.items.effects.EcorceCharredOakInnerBarkEffect;
-import com.onticentity.ecorce.items.effects.EcorceCharredSpruceInnerBarkEffect;
 import net.fabricmc.fabric.api.registry.CompostableRegistry;
 import net.fabricmc.fabric.api.registry.FuelValueEvents;
 import net.minecraft.core.Registry;
@@ -26,10 +23,6 @@ public class EcorceItems {
     public static final ResourceKey<Item> OAK_INNER_BARK_KEY =
             keyOfItem("oak_inner_bark");
 
-    public static final ResourceKey<Item> CHARRED_OAK_INNER_BARK_KEY =
-            keyOfItem("charred_oak_inner_bark");
-
-
     public static final Item OAK_OUTER_BARK = register(
             OAK_OUTER_BARK_KEY,
             Item::new,
@@ -48,28 +41,12 @@ public class EcorceItems {
                     )
     );
 
-    public static final Item CHARRED_OAK_INNER_BARK = register(
-            CHARRED_OAK_INNER_BARK_KEY,
-            EcorceCharredOakInnerBarkEffect::new,
-            new Item.Properties()
-                    .food(
-                            new FoodProperties.Builder()
-                                    .nutrition(2)
-                                    .saturationModifier(0.4f)
-                                    .build()
-                    )
-    );
-
-
     // SPRUCE
     public static final ResourceKey<Item> SPRUCE_OUTER_BARK_KEY =
             keyOfItem("spruce_outer_bark");
 
     public static final ResourceKey<Item> SPRUCE_INNER_BARK_KEY =
             keyOfItem("spruce_inner_bark");
-
-    public static final ResourceKey<Item> CHARRED_SPRUCE_INNER_BARK_KEY =
-            keyOfItem("charred_spruce_inner_bark");
 
     public static final Item SPRUCE_OUTER_BARK = register(
             SPRUCE_OUTER_BARK_KEY,
@@ -89,29 +66,12 @@ public class EcorceItems {
                     )
     );
 
-    public static final Item CHARRED_SPRUCE_INNER_BARK = register(
-            CHARRED_SPRUCE_INNER_BARK_KEY,
-            EcorceCharredSpruceInnerBarkEffect::new,
-            new Item.Properties()
-                    .food(
-                            new FoodProperties.Builder()
-                                    .nutrition(4)
-                                    .alwaysEdible()
-                                    .saturationModifier(0.2f)
-                                    .build()
-                    )
-    );
-
-
     // BIRCH
     public static final ResourceKey<Item> BIRCH_OUTER_BARK_KEY =
             keyOfItem("birch_outer_bark");
 
     public static final ResourceKey<Item> BIRCH_INNER_BARK_KEY =
             keyOfItem("birch_inner_bark");
-
-    public static final ResourceKey<Item> CHARRED_BIRCH_INNER_BARK_KEY =
-            keyOfItem("charred_birch_inner_bark");
 
     public static final Item BIRCH_OUTER_BARK = register(
             BIRCH_OUTER_BARK_KEY,
@@ -131,28 +91,12 @@ public class EcorceItems {
                     )
     );
 
-    public static final Item CHARRED_BIRCH_INNER_BARK = register(
-            CHARRED_BIRCH_INNER_BARK_KEY,
-            EcorceCharredBirchInnerBarkEffect::new,
-            new Item.Properties()
-                    .food(
-                            new FoodProperties.Builder()
-                                    .nutrition(1)
-                                    .saturationModifier(0.3f)
-                                    .build()
-                    )
-    );
-
-
     // JUNGLE
     public static final ResourceKey<Item> JUNGLE_OUTER_BARK_KEY =
             keyOfItem("jungle_outer_bark");
 
     public static final ResourceKey<Item> JUNGLE_INNER_BARK_KEY =
             keyOfItem("jungle_inner_bark");
-
-    public static final ResourceKey<Item> CHARRED_JUNGLE_INNER_BARK_KEY =
-            keyOfItem("charred_jungle_inner_bark");
 
     public static final Item JUNGLE_OUTER_BARK = register(
             JUNGLE_OUTER_BARK_KEY,
@@ -172,28 +116,12 @@ public class EcorceItems {
                     )
     );
 
-    public static final Item CHARRED_JUNGLE_INNER_BARK = register(
-            CHARRED_JUNGLE_INNER_BARK_KEY,
-            Item::new,
-            new Item.Properties()
-                    .food(
-                            new FoodProperties.Builder()
-                                    .nutrition(2)
-                                    .saturationModifier(0.2f)
-                                    .build()
-                    )
-    );
-
-
     // ACACIA
     public static final ResourceKey<Item> ACACIA_OUTER_BARK_KEY =
             keyOfItem("acacia_outer_bark");
 
     public static final ResourceKey<Item> ACACIA_INNER_BARK_KEY =
             keyOfItem("acacia_inner_bark");
-
-    public static final ResourceKey<Item> CHARRED_ACACIA_INNER_BARK_KEY =
-            keyOfItem("charred_acacia_inner_bark");
 
     public static final Item ACACIA_OUTER_BARK = register(
             ACACIA_OUTER_BARK_KEY,
@@ -213,28 +141,12 @@ public class EcorceItems {
                     )
     );
 
-    public static final Item CHARRED_ACACIA_INNER_BARK = register(
-            CHARRED_ACACIA_INNER_BARK_KEY,
-            Item::new,
-            new Item.Properties()
-                    .food(
-                            new FoodProperties.Builder()
-                                    .nutrition(2)
-                                    .saturationModifier(0.6f)
-                                    .build()
-                    )
-    );
-
-
     // DARK OAK
     public static final ResourceKey<Item> DARK_OAK_OUTER_BARK_KEY =
             keyOfItem("dark_oak_outer_bark");
 
     public static final ResourceKey<Item> DARK_OAK_INNER_BARK_KEY =
             keyOfItem("dark_oak_inner_bark");
-
-    public static final ResourceKey<Item> CHARRED_DARK_OAK_INNER_BARK_KEY =
-            keyOfItem("charred_dark_oak_inner_bark");
 
     public static final Item DARK_OAK_OUTER_BARK = register(
             DARK_OAK_OUTER_BARK_KEY,
@@ -254,28 +166,12 @@ public class EcorceItems {
                     )
     );
 
-    public static final Item CHARRED_DARK_OAK_INNER_BARK = register(
-            CHARRED_DARK_OAK_INNER_BARK_KEY,
-            Item::new,
-            new Item.Properties()
-                    .food(
-                            new FoodProperties.Builder()
-                                    .nutrition(2)
-                                    .saturationModifier(0.8f)
-                                    .build()
-                    )
-    );
-
-
     // MANGROVE
     public static final ResourceKey<Item> MANGROVE_OUTER_BARK_KEY =
             keyOfItem("mangrove_outer_bark");
 
     public static final ResourceKey<Item> MANGROVE_INNER_BARK_KEY =
             keyOfItem("mangrove_inner_bark");
-
-    public static final ResourceKey<Item> CHARRED_MANGROVE_INNER_BARK_KEY =
-            keyOfItem("charred_mangrove_inner_bark");
 
     public static final Item MANGROVE_OUTER_BARK = register(
             MANGROVE_OUTER_BARK_KEY,
@@ -295,28 +191,12 @@ public class EcorceItems {
                     )
     );
 
-    public static final Item CHARRED_MANGROVE_INNER_BARK = register(
-            CHARRED_MANGROVE_INNER_BARK_KEY,
-            Item::new,
-            new Item.Properties()
-                    .food(
-                            new FoodProperties.Builder()
-                                    .nutrition(4)
-                                    .saturationModifier(0.6f)
-                                    .build()
-                    )
-    );
-
-
     // CHERRY
     public static final ResourceKey<Item> CHERRY_OUTER_BARK_KEY =
             keyOfItem("cherry_outer_bark");
 
     public static final ResourceKey<Item> CHERRY_INNER_BARK_KEY =
             keyOfItem("cherry_inner_bark");
-
-    public static final ResourceKey<Item> CHARRED_CHERRY_INNER_BARK_KEY =
-            keyOfItem("charred_cherry_inner_bark");
 
     public static final Item CHERRY_OUTER_BARK = register(
             CHERRY_OUTER_BARK_KEY,
@@ -336,28 +216,12 @@ public class EcorceItems {
                     )
     );
 
-    public static final Item CHARRED_CHERRY_INNER_BARK = register(
-            CHARRED_CHERRY_INNER_BARK_KEY,
-            Item::new,
-            new Item.Properties()
-                    .food(
-                            new FoodProperties.Builder()
-                                    .nutrition(4)
-                                    .saturationModifier(0.4f)
-                                    .build()
-                    )
-    );
-
-
     // PALE OAK
     public static final ResourceKey<Item> PALE_OAK_OUTER_BARK_KEY =
             keyOfItem("pale_oak_outer_bark");
 
     public static final ResourceKey<Item> PALE_OAK_INNER_BARK_KEY =
             keyOfItem("pale_oak_inner_bark");
-
-    public static final ResourceKey<Item> CHARRED_PALE_OAK_INNER_BARK_KEY =
-            keyOfItem("charred_pale_oak_inner_bark");
 
     public static final Item PALE_OAK_OUTER_BARK = register(
             PALE_OAK_OUTER_BARK_KEY,
@@ -373,18 +237,6 @@ public class EcorceItems {
                             new FoodProperties.Builder()
                                     .nutrition(1)
                                     .saturationModifier(0.5f)
-                                    .build()
-                    )
-    );
-
-    public static final Item CHARRED_PALE_OAK_INNER_BARK = register(
-            CHARRED_PALE_OAK_INNER_BARK_KEY,
-            Item::new,
-            new Item.Properties()
-                    .food(
-                            new FoodProperties.Builder()
-                                    .nutrition(2)
-                                    .saturationModifier(1f)
                                     .build()
                     )
     );

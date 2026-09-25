@@ -23,20 +23,12 @@ public class EcorceModelProvider extends FabricModelProvider {
                 ModelTemplates.FLAT_ITEM
         );
         itemModelGenerator.generateFlatItem(
-                EcorceItems.CHARRED_OAK_INNER_BARK,
-                ModelTemplates.FLAT_ITEM
-        );
-        itemModelGenerator.generateFlatItem(
                 EcorceItems.OAK_OUTER_BARK,
                 ModelTemplates.FLAT_ITEM
         );
 
         itemModelGenerator.generateFlatItem(
                 EcorceItems.SPRUCE_INNER_BARK,
-                ModelTemplates.FLAT_ITEM
-        );
-        itemModelGenerator.generateFlatItem(
-                EcorceItems.CHARRED_SPRUCE_INNER_BARK,
                 ModelTemplates.FLAT_ITEM
         );
         itemModelGenerator.generateFlatItem(
@@ -49,20 +41,12 @@ public class EcorceModelProvider extends FabricModelProvider {
                 ModelTemplates.FLAT_ITEM
         );
         itemModelGenerator.generateFlatItem(
-                EcorceItems.CHARRED_BIRCH_INNER_BARK,
-                ModelTemplates.FLAT_ITEM
-        );
-        itemModelGenerator.generateFlatItem(
                 EcorceItems.BIRCH_OUTER_BARK,
                 ModelTemplates.FLAT_ITEM
         );
 
         itemModelGenerator.generateFlatItem(
                 EcorceItems.JUNGLE_INNER_BARK,
-                ModelTemplates.FLAT_ITEM
-        );
-        itemModelGenerator.generateFlatItem(
-                EcorceItems.CHARRED_JUNGLE_INNER_BARK,
                 ModelTemplates.FLAT_ITEM
         );
         itemModelGenerator.generateFlatItem(
@@ -75,20 +59,12 @@ public class EcorceModelProvider extends FabricModelProvider {
                 ModelTemplates.FLAT_ITEM
         );
         itemModelGenerator.generateFlatItem(
-                EcorceItems.CHARRED_ACACIA_INNER_BARK,
-                ModelTemplates.FLAT_ITEM
-        );
-        itemModelGenerator.generateFlatItem(
                 EcorceItems.ACACIA_OUTER_BARK,
                 ModelTemplates.FLAT_ITEM
         );
 
         itemModelGenerator.generateFlatItem(
                 EcorceItems.DARK_OAK_INNER_BARK,
-                ModelTemplates.FLAT_ITEM
-        );
-        itemModelGenerator.generateFlatItem(
-                EcorceItems.CHARRED_DARK_OAK_INNER_BARK,
                 ModelTemplates.FLAT_ITEM
         );
         itemModelGenerator.generateFlatItem(
@@ -101,10 +77,6 @@ public class EcorceModelProvider extends FabricModelProvider {
                 ModelTemplates.FLAT_ITEM
         );
         itemModelGenerator.generateFlatItem(
-                EcorceItems.CHARRED_MANGROVE_INNER_BARK,
-                ModelTemplates.FLAT_ITEM
-        );
-        itemModelGenerator.generateFlatItem(
                 EcorceItems.MANGROVE_OUTER_BARK,
                 ModelTemplates.FLAT_ITEM
         );
@@ -114,20 +86,12 @@ public class EcorceModelProvider extends FabricModelProvider {
                 ModelTemplates.FLAT_ITEM
         );
         itemModelGenerator.generateFlatItem(
-                EcorceItems.CHARRED_CHERRY_INNER_BARK,
-                ModelTemplates.FLAT_ITEM
-        );
-        itemModelGenerator.generateFlatItem(
                 EcorceItems.CHERRY_OUTER_BARK,
                 ModelTemplates.FLAT_ITEM
         );
 
         itemModelGenerator.generateFlatItem(
                 EcorceItems.PALE_OAK_INNER_BARK,
-                ModelTemplates.FLAT_ITEM
-        );
-        itemModelGenerator.generateFlatItem(
-                EcorceItems.CHARRED_PALE_OAK_INNER_BARK,
                 ModelTemplates.FLAT_ITEM
         );
         itemModelGenerator.generateFlatItem(
